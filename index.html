@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEELFORGE INDUSTRIES | Iron & Steel Manufacturing & Supply</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#252525',
+                        steelGray: '#5F6368',
+                        lightBg: '#F4F5F6',
+                        accentBlue: '#2F5D7C',
+                        bodyText: '#202124'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #202124;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-white text-bodyText antialiased selection:bg-accentBlue selection:text-white">
+
+    <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 bg-charcoal flex items-center justify-center rounded-sm text-white font-bold text-xl tracking-wider shadow-sm">
+                            SF
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-lg tracking-wider text-charcoal leading-none">STEELFORGE</span>
+                            <span class="text-xs font-semibold tracking-widest text-steelGray uppercase mt-0.5">Industries</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-steelGray">
+                    <a href="#home" class="text-charcoal hover:text-accentBlue transition-colors">Home</a>
+                    <a href="#about" class="hover:text-accentBlue transition-colors">About Us</a>
+                    <a href="#products" class="hover:text-accentBlue transition-colors">Products</a>
+                    <a href="#industries" class="hover:text-accentBlue transition-colors">Industries</a>
+                    <a href="#manufacturing" class="hover:text-accentBlue transition-colors">Manufacturing</a>
+                    <a href="#quality" class="hover:text-accentBlue transition-colors">Quality</a>
+                    <a href="#contact" class="hover:text-accentBlue transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right Action Button (Desktop) -->
+                <div class="hidden lg:flex items-center">
+                    <button onclick="openQuoteModal()" class="inline-flex items-center justify-center px-5 py-2.5 bg-accentBlue hover:bg-[#244a63] text-white text-sm font-semibold rounded-sm transition-colors shadow-sm">
+                        Get a Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-charcoal hover:text-accentBlue p-2 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Home</a>
+            <a href="#about" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">About Us</a>
+            <a href="#products" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Products</a>
+            <a href="#industries" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Industries</a>
+            <a href="#manufacturing" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Manufacturing</a>
+            <a href="#quality" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Quality</a>
+            <a href="#contact" class="block py-2 text-base font-medium text-charcoal hover:text-accentBlue mobile-link">Contact</a>
+            <div class="pt-2">
+                <button onclick="openQuoteModal(); toggleMobileMenu();" class="block text-center w-full py-3 bg-accentBlue text-white text-sm font-semibold rounded-sm shadow-sm">
+                    Get a Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-charcoal text-white min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80" alt="Steel Manufacturing Facility" class="w-full h-full object-cover object-center opacity-35 scale-105 transform transition-transform duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-sm backdrop-blur-sm text-xs uppercase font-semibold tracking-wider text-gray-300 mb-6 border border-white/10">
+                    <i class="fa-solid fa-shield text-accentBlue"></i>
+                    <span>ISO 9001:2015 Certified Manufacturer & Exporter</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
+                    Strength That Builds Industries.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed font-light max-w-2xl">
+                    Reliable Iron & Steel Solutions Engineered for Strength, Precision, and Performance. Delivering top-tier metal alloys globally.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="inline-flex items-center justify-center px-8 py-4 bg-accentBlue hover:bg-[#244a63] text-white font-semibold text-sm rounded-sm transition-colors shadow-md">
+                        Explore Products
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                    <button onclick="openQuoteModal()" class="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold text-sm rounded-sm transition-colors">
+                        Request a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accentBlue via-steelGray to-charcoal"></div>
+    </section>
+
+    <section id="about" class="py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase">
+                        <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                        <span>Established Excellence</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                        Built on Strength. Driven by Quality.
+                    </h2>
+                    <p class="text-steelGray text-base leading-relaxed">
+                        Steelforge Industries is a premier manufacturer, processor, fabricator, and global supplier of high-performance iron and steel products. For over two decades, we have powered heavy engineering, large-scale construction, transport networks, and critical infrastructure projects worldwide with uncompromising material integrity.
+                    </p>
+                    <p class="text-steelGray text-base leading-relaxed">
+                        Our state-of-the-art metallurgical plants combine cutting-edge rolling technology with rigorous metallurgical science, ensuring every ton of steel delivered meets the most stringent international structural standards.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#manufacturing" class="inline-flex items-center text-accentBlue font-semibold text-sm hover:underline">
+                            Learn more about our manufacturing capability <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1558486011-835848f0b8c9?auto=format&fit=crop&w=800&q=80" alt="Steel Manufacturing plant interior" class="rounded-sm shadow-md w-full h-96 object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-charcoal text-white p-6 hidden sm:block max-w-xs shadow-lg border-l-4 border-accentBlue">
+                            <p class="text-sm font-medium italic">"Precision engineering and metallurgical excellence embedded in every beam, coil, and bar."</p>
+                            <span class="block mt-2 text-xs text-gray-400 font-semibold">— Chief Metallurgist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm text-center hover:border-accentBlue transition-colors">
+                    <div class="text-4xl font-bold text-charcoal mb-2">25+</div>
+                    <div class="text-xs uppercase tracking-widest text-steelGray font-semibold">Years of Experience</div>
+                </div>
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm text-center hover:border-accentBlue transition-colors">
+                    <div class="text-4xl font-bold text-charcoal mb-2">50+</div>
+                    <div class="text-xs uppercase tracking-widest text-steelGray font-semibold">Industrial Projects</div>
+                </div>
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm text-center hover:border-accentBlue transition-colors">
+                    <div class="text-4xl font-bold text-charcoal mb-2">20+</div>
+                    <div class="text-xs uppercase tracking-widest text-steelGray font-semibold">Countries Served</div>
+                </div>
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm text-center hover:border-accentBlue transition-colors">
+                    <div class="text-4xl font-bold text-charcoal mb-2">99%</div>
+                    <div class="text-xs uppercase tracking-widest text-steelGray font-semibold">Quality Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>Robust Portfolio</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Our Steel Products
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    Engineered to withstand extreme loads and harsh environments. Explore our core industrial steel offerings manufactured to exact tolerance levels.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Structural Steel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">Structural Steel</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                Heavy-duty beams, channels, and angles designed for industrial construction, bridges, and high-rise structures.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('Structural Steel', 'Heavy-duty beams, channels, and angles designed for industrial construction, bridges, and high-rise structures. Manufactured with high yield strength to support massive architectural loads.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Steel Plates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">Steel Plates</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                High-tensile carbon and alloy steel plates built for pressure vessels, shipbuilding, heavy machinery, and defense.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('Steel Plates', 'High-tensile carbon and alloy steel plates built for pressure vessels, shipbuilding, heavy machinery, and defense. Excellent weldability and impact toughness.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Steel Coils" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">Steel Coils</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                Hot-rolled and cold-rolled coils with superior surface finish, uniform thickness, and excellent formability.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('Steel Coils', 'Hot-rolled and cold-rolled coils with superior surface finish, uniform thickness, and excellent formability for automotive and appliance manufacturing.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="TMT Bars" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">TMT Bars</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                Thermo-mechanically treated reinforcement bars offering exceptional ductility, bendability, and earthquake resistance.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('TMT Bars', 'Thermo-mechanically treated reinforcement bars offering exceptional ductility, bendability, and earthquake resistance for high-grade concrete structures.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80" alt="Mild Steel Products" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">Mild Steel Products</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                Versatile mild steel bars, tubes, and sections tailored for general fabrication, industrial piping, and framing.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('Mild Steel Products', 'Versatile mild steel bars, tubes, and sections tailored for general fabrication, industrial piping, and framing with high machinability.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-lightBg border border-gray-200 rounded-sm overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Stainless Steel Products" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-charcoal mb-2">Stainless Steel Products</h3>
+                            <p class="text-steelGray text-sm mb-6 leading-relaxed">
+                                Corrosion-resistant austenitic and ferritic stainless steel grades for chemical, food processing, and marine applications.
+                            </p>
+                        </div>
+                        <button onclick="openProductModal('Stainless Steel Products', 'Corrosion-resistant austenitic and ferritic stainless steel grades for chemical, food processing, and marine applications requiring superior longevity.')" class="inline-flex items-center text-accentBlue font-semibold text-sm group-hover:translate-x-1 transition-transform cursor-pointer text-left">
+                            View Details & Specs <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries" class="py-24 bg-lightBg border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>Global Impact</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Industries We Serve
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    Our robust metal solutions form the backbone of critical global sectors where safety, durability, and performance cannot be compromised.
+                </p>
+            </div>
+
+            <!-- Industries Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Construction</h3>
+                    <p class="text-xs text-steelGray mt-1">Commercial & residential framing</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bridge text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Infrastructure</h3>
+                    <p class="text-xs text-steelGray mt-1">Bridges, highways & rail</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Automotive</h3>
+                    <p class="text-xs text-steelGray mt-1">Chassis & body components</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-industry text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Manufacturing</h3>
+                    <p class="text-xs text-steelGray mt-1">Heavy machinery & tools</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Energy</h3>
+                    <p class="text-xs text-steelGray mt-1">Power plants & renewables</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-gear text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Engineering</h3>
+                    <p class="text-xs text-steelGray mt-1">Complex mechanical builds</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-oil-well text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Oil & Gas</h3>
+                    <p class="text-xs text-steelGray mt-1">Pipelines & refineries</p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm text-center group hover:border-accentBlue transition-all shadow-sm">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm group-hover:bg-accentBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-truck-monster text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-charcoal text-base">Heavy Machinery</h3>
+                    <p class="text-xs text-steelGray mt-1">Mining & earthmovers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manufacturing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>Precision Workflow</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Manufacturing Process
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    From raw iron ore to finished industrial-grade steel products, our advanced production pipeline guarantees superior metallurgical integrity.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">01</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Raw Material</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Carefully sourced high-grade iron ore, scrap metal, and high-purity carbon inputs tested for baseline purity before smelting.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">02</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Melting & Processing</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Electric arc furnaces melt raw inputs at extreme temperatures with precise alloy additions to achieve target chemical composition.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">03</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Rolling / Forming</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Molten steel is cast and passed through high-pressure rolling mills to shape structural beams, plates, coils, and bars.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">04</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Quality Inspection</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Rigorous non-destructive testing, ultrasonic flaw detection, and tensile strength checks are performed on batch samples.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">05</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Finishing</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Surface treatment, anti-corrosion coating, thermal treatments, and precision cutting to exact customer dimensions.
+                    </p>
+                </div>
+
+                <div class="p-8 border border-gray-200 bg-lightBg rounded-sm relative">
+                    <span class="text-4xl font-bold text-accentBlue/40 absolute top-4 right-6">06</span>
+                    <h3 class="text-xl font-bold text-charcoal mb-3 pt-4">Packaging & Delivery</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Weather-resistant packaging and secure logistics management ensuring safe transit to domestic and international project sites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality" class="py-24 bg-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase">
+                        <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                        <span>Uncompromising Standards</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                        Quality You Can Depend On
+                    </h2>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        At Steelforge Industries, quality control is embedded in every stage of our production cycle. Our state-of-the-art metallurgy laboratories utilize advanced spectrometry and tensile testing equipment to inspect raw materials, intermediate billets, and finished steel products.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        We adhere strictly to international manufacturing codes, ensuring that our clients receive verified, fully traceable materials that meet rigorous safety and durability benchmarks.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <div class="w-12 h-12 bg-accentBlue/20 text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                            <i class="fa-solid fa-award text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">ISO Certified</h3>
+                        <p class="text-gray-400 text-sm">Certified management systems ensuring consistent manufacturing excellence and operational transparency.</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <div class="w-12 h-12 bg-accentBlue/20 text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                            <i class="fa-solid fa-microscope text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Quality Tested</h3>
+                        <p class="text-gray-400 text-sm">Comprehensive mechanical and chemical laboratory testing performed on every production batch.</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <div class="w-12 h-12 bg-accentBlue/20 text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                            <i class="fa-solid fa-globe text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">International Standards</h3>
+                        <p class="text-gray-400 text-sm">Compliance with global structural engineering specifications including ASTM, EN, and JIS norms.</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <div class="w-12 h-12 bg-accentBlue/20 text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                            <i class="fa-solid fa-barcode text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Traceable Materials</h3>
+                        <p class="text-gray-400 text-sm">Full digital traceability from mill test certificates down to individual bundles and plates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>The Steelforge Advantage</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Why Choose Us
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    Partnering with us means gaining a reliable supply chain, expert metallurgical consulting, and top-tier industrial products.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-gem text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">High-Quality Materials</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Superior alloy compositions engineered for maximum load bearing capacity, fatigue resistance, and durability.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-gears text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">Advanced Manufacturing</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Modern rolling mills and automated furnaces delivering precise dimensions and impeccable surface finishes.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-check-double text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">Consistent Quality</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Strict batch testing ensures every delivery matches the exact mechanical properties required for your project.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-truck-fast text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">On-Time Delivery</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Robust global logistics and streamlined warehousing networks ensuring your materials arrive exactly when scheduled.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-tags text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">Competitive Pricing</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Direct-from-manufacturer supply models offering cost-effective pricing without compromising on material integrity.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm">
+                    <div class="w-12 h-12 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm mb-4">
+                        <i class="fa-solid fa-user-tie text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-charcoal mb-2">Technical Expertise</h3>
+                    <p class="text-steelGray text-sm leading-relaxed">
+                        Dedicated team of metallurgists and engineers ready to assist with grade selection, sizing, and custom fabrication.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>Proven Applications</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Projects & Applications
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    Witness where our structural steel and plates are deployed in iconic architectural and industrial achievements worldwide.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative group overflow-hidden rounded-sm h-80 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=600&q=80" alt="Bridges" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-accentBlue text-xs font-semibold uppercase tracking-wider mb-1">Infrastructure</span>
+                        <h3 class="text-xl font-bold text-white">Long-Span Bridges</h3>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-sm h-80 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="High-Rise Construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-accentBlue text-xs font-semibold uppercase tracking-wider mb-1">Construction</span>
+                        <h3 class="text-xl font-bold text-white">High-Rise Towers</h3>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-sm h-80 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Industrial Buildings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-accentBlue text-xs font-semibold uppercase tracking-wider mb-1">Manufacturing</span>
+                        <h3 class="text-xl font-bold text-white">Industrial Complexes</h3>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-sm h-80 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Manufacturing Plants" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-accentBlue text-xs font-semibold uppercase tracking-wider mb-1">Heavy Engineering</span>
+                        <h3 class="text-xl font-bold text-white">Processing Plants</h3>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-sm h-80 shadow-sm md:col-span-2 lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80" alt="Infrastructure Projects" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-accentBlue text-xs font-semibold uppercase tracking-wider mb-1">Mega Infrastructure</span>
+                        <h3 class="text-xl font-bold text-white">Transport & Logistics Hubs</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-accentBlue text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                Let's Build Something Strong.
+            </h2>
+            <p class="text-lg text-gray-100 max-w-2xl mx-auto mb-8 font-light">
+                Looking for reliable iron and steel solutions for your next project? Talk to our team today for technical consultation and customized pricing.
+            </p>
+            <button onclick="openQuoteModal()" class="inline-flex items-center justify-center px-8 py-4 bg-charcoal hover:bg-black text-white font-semibold text-sm rounded-sm transition-colors shadow-lg">
+                Request a Quote
+                <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 text-accentBlue font-semibold text-xs tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                    <span>Get in Touch</span>
+                    <span class="w-8 h-[2px] bg-accentBlue inline-block"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">
+                    Contact Our Industrial Team
+                </h2>
+                <p class="text-steelGray text-base mt-4">
+                    Connect with our sales and metallurgical engineers for inquiries, custom orders, and technical support.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 border border-gray-200 rounded-sm shadow-sm">
+                    <h3 class="text-xl font-bold text-charcoal mb-6">Submit an Inquiry</h3>
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Full Name *</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Company Name *</label>
+                                <input type="text" id="contact-company" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Email Address *</label>
+                                <input type="email" id="contact-email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Phone Number *</label>
+                                <input type="tel" id="contact-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Product / Requirement *</label>
+                            <select id="contact-product" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm bg-white">
+                                <option value="">Select Steel Product Category</option>
+                                <option value="Structural Steel">Structural Steel (Beams, Channels, Angles)</option>
+                                <option value="Steel Plates">Steel Plates</option>
+                                <option value="Steel Coils">Steel Coils (HR/CR)</option>
+                                <option value="TMT Bars">TMT Bars</option>
+                                <option value="Mild Steel Products">Mild Steel Products</option>
+                                <option value="Stainless Steel">Stainless Steel Products</option>
+                                <option value="Custom Fabrication">Custom Fabrication & Alloy Requirements</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-2">Message *</label>
+                            <textarea id="contact-message" rows="4" required placeholder="Specify quantity, dimensions, delivery location, etc." class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-accentBlue hover:bg-[#244a63] text-white font-semibold text-sm rounded-sm transition-colors shadow-sm">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information & Map Placeholder -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-white p-8 border border-gray-200 rounded-sm shadow-sm space-y-6">
+                        <h3 class="text-xl font-bold text-charcoal">Corporate Headquarters</h3>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal text-sm">Address</h4>
+                                <p class="text-steelGray text-sm mt-0.5">100 Industrial Parkway, Metallurgical Zone, Sector 4, Steel City</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal text-sm">Phone</h4>
+                                <p class="text-steelGray text-sm mt-0.5">+1 (800) 555-STEEL / +1 (800) 555-7833</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal text-sm">Email</h4>
+                                <p class="text-steelGray text-sm mt-0.5">inquiries@steelforge-industries.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-lightBg text-accentBlue flex items-center justify-center rounded-sm flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal text-sm">Business Hours</h4>
+                                <p class="text-steelGray text-sm mt-0.5">Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="bg-charcoal text-white p-8 rounded-sm shadow-sm text-center relative overflow-hidden h-64 flex flex-col items-center justify-center border border-gray-800">
+                        <div class="absolute inset-0 opacity-20">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Map background" class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative z-10 space-y-3">
+                            <i class="fa-solid fa-map-location-dot text-4xl text-accentBlue"></i>
+                            <h4 class="font-bold text-lg">Global Plant & Logistics Network</h4>
+                            <p class="text-xs text-gray-300 max-w-xs">Serving clients across 20+ countries with strategic distribution terminals worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 bg-accentBlue flex items-center justify-center rounded-sm text-white font-bold text-lg tracking-wider">
+                            SF
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-base tracking-wider text-white leading-none">STEELFORGE</span>
+                            <span class="text-[10px] font-semibold tracking-widest text-gray-400 uppercase mt-0.5">Industries</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
+                        Steelforge Industries is a global leader in iron and steel manufacturing, processing, and heavy fabrication, delivering uncompromised material strength to critical global infrastructure.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-accentBlue hover:text-white flex items-center justify-center rounded-sm text-gray-300 transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-accentBlue hover:text-white flex items-center justify-center rounded-sm text-gray-300 transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-accentBlue hover:text-white flex items-center justify-center rounded-sm text-gray-300 transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/5 hover:bg-accentBlue hover:text-white flex items-center justify-center rounded-sm text-gray-300 transition-colors"><i class="fa-brands fa-globe text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#manufacturing" class="hover:text-white transition-colors">Manufacturing</a></li>
+                        <li><a href="#quality" class="hover:text-white transition-colors">Quality & Testing</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Products -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Products</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#products" class="hover:text-white transition-colors">Structural Steel</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Steel Plates</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Steel Coils</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">TMT Bars</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Stainless Steel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Industries -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Industries</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#industries" class="hover:text-white transition-colors">Construction</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Infrastructure & Rail</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Automotive & OEM</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Oil & Gas</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Heavy Machinery</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 STEELFORGE INDUSTRIES. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-gray-400 transition-colors">ISO 9001 Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-sm max-w-lg w-full p-8 relative shadow-2xl border-t-4 border-accentBlue">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-charcoal text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span class="text-xs uppercase font-semibold text-accentBlue tracking-widest">Product Specification</span>
+            <h3 id="modal-product-title" class="text-2xl font-bold text-charcoal mt-1 mb-4"></h3>
+            <p id="modal-product-desc" class="text-steelGray text-sm leading-relaxed mb-6"></p>
+            <div class="bg-lightBg p-4 rounded-sm border border-gray-200 mb-6 text-xs text-steelGray space-y-1">
+                <div><strong>Standard:</strong> ASTM A36 / EN 10025 / JIS G3101</div>
+                <div><strong>Tolerance:</strong> Standard mill tolerance or custom precision cutting</div>
+                <div><strong>Mill Test Certificate:</strong> Included with every shipment</div>
+            </div>
+            <div class="flex space-x-4">
+                <button onclick="closeProductModal(); openQuoteModal();" class="flex-1 py-3 bg-accentBlue text-white text-sm font-semibold rounded-sm hover:bg-[#244a63] transition-colors">
+                    Request Quote for this Product
+                </button>
+                <button onclick="closeProductModal()" class="px-5 py-3 bg-gray-200 text-charcoal text-sm font-semibold rounded-sm hover:bg-gray-300 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote / Success Modal -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-sm max-w-lg w-full p-8 relative shadow-2xl border-t-4 border-accentBlue">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-gray-400 hover:text-charcoal text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quote-form-container">
+                <span class="text-xs uppercase font-semibold text-accentBlue tracking-widest">B2B Procurement</span>
+                <h3 class="text-2xl font-bold text-charcoal mt-1 mb-2">Request a Formal Quote</h3>
+                <p class="text-steelGray text-sm mb-6">Complete your requirements below and our commercial sales team will respond within 24 business hours.</p>
+                
+                <form onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-1">Full Name *</label>
+                        <input type="text" id="quote-name" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-1">Company & Project Name *</label>
+                        <input type="text" id="quote-company" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-1">Email *</label>
+                            <input type="email" id="quote-email" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-1">Phone *</label>
+                            <input type="tel" id="quote-phone" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-steelGray mb-1">Requirement Details & Tonnage *</label>
+                        <textarea id="quote-details" rows="3" required placeholder="Specify grade, dimensions, estimated tonnage, and destination port..." class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:outline-none focus:border-accentBlue text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-accentBlue text-white text-sm font-semibold rounded-sm hover:bg-[#244a63] transition-colors">
+                        Submit Quote Request
+                    </button>
+                </form>
+            </div>
+            
+            <div id="quote-success" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-charcoal">Inquiry Received</h3>
+                <p class="text-steelGray text-sm">Thank you for contacting Steelforge Industries. Our commercial department has received your request and will contact you shortly.</p>
+                <button onclick="closeQuoteModal()" class="px-6 py-2.5 bg-charcoal text-white text-sm font-semibold rounded-sm hover:bg-black transition-colors">
+                    Back to Website
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Product Modal Logic
+        const productModal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-product-title');
+        const modalDesc = document.getElementById('modal-product-desc');
+
+        function openProductModal(title, desc) {
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            productModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductModal() {
+            productModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Quote Modal Logic
+        const quoteModal = document.getElementById('quote-modal');
+        const quoteFormContainer = document.getElementById('quote-form-container');
+        const quoteSuccess = document.getElementById('quote-success');
+
+        function openQuoteModal() {
+            quoteFormContainer.classList.remove('hidden');
+            quoteSuccess.classList.add('hidden');
+            quoteModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuoteModal() {
+            quoteModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            quoteFormContainer.classList.add('hidden');
+            quoteSuccess.classList.remove('hidden');
+        }
+
+        // Contact Form Submission
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const company = document.getElementById('contact-company').value;
+            
+            // Show custom styled notification modal instead of alert()
+            modalTitle.textContent = "Inquiry Submitted Successfully";
+            modalDesc.textContent = `Thank you, ${name} from ${company}. Our metallurgical sales engineers have received your inquiry and will respond within 24 hours.`;
+            document.querySelector('#product-modal .bg-lightBg').style.display = 'none';
+            productModal.classList.remove('hidden');
+            
+            document.getElementById('contact-form').reset();
+        }
+
+        // Close modals on outside click
+        window.onclick = function(event) {
+            if (event.target === productModal) {
+                closeProductModal();
+            }
+            if (event.target === quoteModal) {
+                closeQuoteModal();
+            }
+        }
+    </script>
+</body>
+</html>
